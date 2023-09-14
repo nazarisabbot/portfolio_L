@@ -6,7 +6,7 @@ import gulpif from 'gulp-if';
 import browserSync from 'browser-sync';
 import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
-import { deleteSync } from 'del';
+import {deleteSync} from 'del';
 
 // html*pug
 import htmlmin from 'gulp-htmlmin';
@@ -22,7 +22,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import gcmq from 'gulp-group-css-media-queries';
-import { stream as critical } from 'critical';
+import {stream as critical} from 'critical';
 
 // js
 import terser from 'gulp-terser';
