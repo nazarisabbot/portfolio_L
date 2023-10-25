@@ -1,11 +1,7 @@
 @font-face {
-  @include font(Roboto, 300)
+  @include font("Sen-Regular", 500)
 }
 
 @font-face {
-  @include font(Roboto, 400)
-}
-
-@font-face {
-  @include font(Roboto, 700)
+  @include font("Sen-Bold", 700)
 }

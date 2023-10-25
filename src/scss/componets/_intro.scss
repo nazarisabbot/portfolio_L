@@ -1,0 +1,144 @@
+.intro {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  color: $text;
+  font-family: "Sen-Bold";
+  font-size: 78px;
+
+  @media (max-width: 1440px) {
+    font-size: calc(32px + (78 - 32) * ((100vw - 360px) / (1440 - 360)));
+  }
+
+  @media (max-width: 628px) {
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-top: 1px dashed $text;
+      border-top-width: 2px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    height: 724px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    background-color: $level1;
+    z-index: -2;
+
+    @media (max-width: 1080px) {
+      width: 70%;
+    }
+
+    @media (max-width: 628px) {
+      display: none;
+    }
+  }
+  
+  &__body {
+    height: 100%;
+    position: relative;
+  }
+
+  &__body::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 20%;
+    left: 0;
+    height: 650px;
+    width: 750px;
+    background-image: url(../img/main_photo.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+
+    @media (max-width: 1080px) {
+      background-image: url(../img/main_photo_384.jpg);
+      width: 383px;
+    }
+
+    @media (max-width: 628px) {
+      top:0;
+      width: 650px;
+      left: -5%;
+      background-image: url(../img/main_photo.jpg);
+    }
+
+    @media (max-width: 360px) {
+      width: 450px;
+    }
+    
+  }
+
+  &__list {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    @media (max-width: 628px) {
+      justify-content: flex-end;
+      padding-bottom: 50px;
+    }
+
+    @media (max-width: 360px) {
+      height: 724px;
+    }
+  }
+
+  &__title {
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    width: 800px;
+    padding-right: 20px;
+    margin-bottom: 36px;
+
+    @media (max-width: 1440px) and (min-width: 628px) {
+      width: calc(478px + (800 - 478) * ((100vw - 628px) / (1440 - 628)));
+    }
+
+    @media (max-width: 628px) {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 16px;
+    }
+
+    span {
+      color: $darkGrey;
+    }
+  }
+
+  &__paragraph {
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    width: 800px;
+
+    @media (max-width: 1440px) and (min-width: 628px) {
+      width: calc(478px + (800 - 478) * ((100vw - 628px) / (1440 - 628)));
+    }
+
+    @media (max-width: 628px) {
+      width: 100%;
+    }
+  }
+}
