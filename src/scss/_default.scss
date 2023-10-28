@@ -112,3 +112,32 @@ main {
     max-width: $desktop;
   }
 }
+
+/// container_inner
+.container_inner {
+  max-width: 1263px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: 360px) {
+    padding: 0 10px;
+  }
+}
+
+@include mobile {
+  .container_inner {
+    max-width: 328px;
+  }
+}
+
+@include tablet {
+  .container_inner {
+    max-width: 694px;
+  }
+}
+
+@include desktop {
+  .container_inner {
+    max-width: 1274px;
+  }
+}
