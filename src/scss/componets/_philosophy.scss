@@ -1,0 +1,94 @@
+.philosophy {
+  width: 100%;
+  height: 100%;
+
+  &_beige {
+    background-color: $peachAccent;
+  }
+
+  &_pink {
+    background-color: $pink;
+  }
+
+  &__body {
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: 1054px) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    @media (max-width: 1054px) {
+      padding-top: 25px;
+      flex-direction: column;
+      flex: none;
+      justify-content: space-between;
+    }
+  }
+
+  &__img {
+    flex: 1 1 50%;
+    height: 100%;
+  }
+
+  &__image {
+    display: block;
+    min-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.lid {
+
+  &__title {
+    font-family: "Sen-Bold";
+    font-size: 55px;
+    line-height: normal;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+
+    @media (max-width: 1440px) {
+      font-size: calc(32px + (55 - 32) * ((100vw - 360px) / (1440 - 360)));
+    }
+
+    &_black {
+      color: $base;
+    }
+  }
+
+  &__paragraph {
+    color: $darkGrey;
+    font-family: "Sen-Regular";
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &__link {
+    height: 24px;
+    display: inline-block;
+    position: relative;
+    color: $level1;
+    font-family: "Sen-Regular";
+    font-size: 16px;
+  }
+
+  
+  &__link::before {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 117px;
+    height: 1px;
+    background-color: $level1;
+  }
+}

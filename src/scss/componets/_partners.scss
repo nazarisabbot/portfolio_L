@@ -1,0 +1,27 @@
+.partners {
+
+  &__list {
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @media (max-width: 628px) {
+      grid-template-columns: 1fr;
+      
+    }
+  }
+
+  &__item {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $darkGrey;
+  }
+}
